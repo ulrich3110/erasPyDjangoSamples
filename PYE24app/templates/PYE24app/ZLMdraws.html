@@ -1,0 +1,22 @@
+{% extends "ZLMbase.html" %}
+
+{% block TITLE %}Grundlage{% endblock %}
+
+{% block CONTENT %}
+<div id="zufall" class="row py-2">
+    <div class="col px-4">
+        <h3>Zufalls-Ziehungen</h3>
+        <p>Es werden 1'000 Zufalls-Ziehungen als Grundlage erstellt.</p>
+    </div>
+</div>
+<div id="start" class="row py-2">
+    <div class="col px-4">
+        <a href="{% url 'PYE24app:ZLMgame' UNIQUE_ID %}" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Fortfahren</a>
+    </div>
+</div>
+<div id="back" class="row py-2">
+    <div class="col px-4">
+        <a href="{% url 'PYE24app:ZLMindex' %}" class="btn btn-secondary btn-lg" tabindex="-1" role="button" aria-disabled="true">Abbruch</a>
+    </div>
+</div>
+{% endblock %}

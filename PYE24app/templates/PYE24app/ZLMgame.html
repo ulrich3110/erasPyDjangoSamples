@@ -1,0 +1,225 @@
+{% extends "ZLMbase.html" %}
+
+{% block TITLE %}Zufalls-Lotto{% endblock %}
+
+{% block CONTENT %}
+<div id="grundlage" class="row py-2">
+    <div class="col px-4">
+        <h3>Zufalls Ziehungen</h3>
+        <p>als Grundlage</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col"><small>Datum / Zeit Ziehung</small></th>
+                    <th scope="col">1. Zahl</th>
+                    <th scope="col">2. Zahl</th>
+                    <th scope="col">3. Zahl</th>
+                    <th scope="col">4. Zahl</th>
+                    <th scope="col">5. Zahl</th>
+                    <th scope="col">6. Zahl</th>
+                    <th scope="col">Zusatz-Zahl</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ R1_ID }}</td>
+                    <td><small>{{ R1_DT }}</small></td>
+                    <td>{{ R1_Z1 }}</td>
+                    <td>{{ R1_Z2 }}</td>
+                    <td>{{ R1_Z3 }}</td>
+                    <td>{{ R1_Z4 }}</td>
+                    <td>{{ R1_Z5 }}</td>
+                    <td>{{ R1_Z6 }}</td>
+                    <td>{{ R1_ZZ }}</td>
+                </tr>
+                <tr>
+                    <td>{{ R2_ID }}</td>
+                    <td><small>{{ R2_DT }}</small></td>
+                    <td>{{ R2_Z1 }}</td>
+                    <td>{{ R2_Z2 }}</td>
+                    <td>{{ R2_Z3 }}</td>
+                    <td>{{ R2_Z4 }}</td>
+                    <td>{{ R2_Z5 }}</td>
+                    <td>{{ R2_Z6 }}</td>
+                    <td>{{ R2_ZZ }}</td>
+                </tr>
+                <tr>
+                    <td colspan="9">...</td>
+                </tr>
+                <tr>
+                    <td>{{ R3_ID }}</td>
+                    <td><small>{{ R3_DT }}</small></td>
+                    <td>{{ R3_Z1 }}</td>
+                    <td>{{ R3_Z2 }}</td>
+                    <td>{{ R3_Z3 }}</td>
+                    <td>{{ R3_Z4 }}</td>
+                    <td>{{ R3_Z5 }}</td>
+                    <td>{{ R3_Z6 }}</td>
+                    <td>{{ R3_ZZ }}</td>
+                </tr>
+                <tr>
+                    <td>{{ R4_ID }}</td>
+                    <td><small>{{ R4_DT }}</small></td>
+                    <td>{{ R4_Z1 }}</td>
+                    <td>{{ R4_Z2 }}</td>
+                    <td>{{ R4_Z3 }}</td>
+                    <td>{{ R4_Z4 }}</td>
+                    <td>{{ R4_Z5 }}</td>
+                    <td>{{ R4_Z6 }}</td>
+                    <td>{{ R4_ZZ }}</td>
+                </tr>
+                <tr>
+                    <td>{{ R5_ID }}</td>
+                    <td><small>{{ R5_DT }}</small></td>
+                    <td>{{ R5_Z1 }}</td>
+                    <td>{{ R5_Z2 }}</td>
+                    <td>{{ R5_Z3 }}</td>
+                    <td>{{ R5_Z4 }}</td>
+                    <td>{{ R5_Z5 }}</td>
+                    <td>{{ R5_Z6 }}</td>
+                    <td>{{ R5_ZZ }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row py-2">
+    <div class="col px-4">
+        <br><hr><br>
+    </div>
+</div>
+<div id="prognose" class="row py-2">
+    <div class="col px-4">
+        <h3>Prognose</h3>
+        <p>für nächste Ziehung</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"><small>Datum / Zeit Prognose</small></th>
+                    <th scope="col">1. Zahl</th>
+                    <th scope="col">2. Zahl</th>
+                    <th scope="col">3. Zahl</th>
+                    <th scope="col">4. Zahl</th>
+                    <th scope="col">5. Zahl</th>
+                    <th scope="col">6. Zahl</th>
+                    <th scope="col">Zusatz-Zahl</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><small>{{ P_DT }}</small></td>
+                    <td>{{ P_Z1 }}</td>
+                    <td>{{ P_Z2 }}</td>
+                    <td>{{ P_Z3 }}</td>
+                    <td>{{ P_Z4 }}</td>
+                    <td>{{ P_Z5 }}</td>
+                    <td>{{ P_Z6 }}</td>
+                    <td>{{ P_ZZ }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="zufall" class="row py-2">
+    <div class="col px-4">
+        <h3>Zufalls-Tipp</h3>
+        <p>als Vergleich</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"><small>Datum / Zeit Tipp</small></th>
+                    <th scope="col">1. Zahl</th>
+                    <th scope="col">2. Zahl</th>
+                    <th scope="col">3. Zahl</th>
+                    <th scope="col">4. Zahl</th>
+                    <th scope="col">5. Zahl</th>
+                    <th scope="col">6. Zahl</th>
+                    <th scope="col">Zusatz-Zahl</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><small>{{ Z_DT }}</small></td>
+                    <td>{{ Z_Z1 }}</td>
+                    <td>{{ Z_Z2 }}</td>
+                    <td>{{ Z_Z3 }}</td>
+                    <td>{{ Z_Z4 }}</td>
+                    <td>{{ Z_Z5 }}</td>
+                    <td>{{ Z_Z6 }}</td>
+                    <td>{{ Z_ZZ }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row py-2">
+    <div class="col px-4">
+        <br><hr><br>
+    </div>
+</div>
+<div id="ziehung" class="row py-2">
+    <div class="col px-4">
+        <h3>Lotto-Ziehung</h3>
+        <p>aus Zufalls-Zahlen</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"><small>Datum / Zeit Tipp</small></th>
+                    <th scope="col">1. Zahl</th>
+                    <th scope="col">2. Zahl</th>
+                    <th scope="col">3. Zahl</th>
+                    <th scope="col">4. Zahl</th>
+                    <th scope="col">5. Zahl</th>
+                    <th scope="col">6. Zahl</th>
+                    <th scope="col">Zusatz-Zahl</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><small>{{ L_DT }}</small></td>
+                    <td>{{ L_Z1 }}</td>
+                    <td>{{ L_Z2 }}</td>
+                    <td>{{ L_Z3 }}</td>
+                    <td>{{ L_Z4 }}</td>
+                    <td>{{ L_Z5 }}</td>
+                    <td>{{ L_Z6 }}</td>
+                    <td>{{ L_ZZ }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row py-2">
+    <div class="col px-4">
+        <br><hr><br>
+    </div>
+</div>
+<div id="vergleich" class="row py-2">
+    <div class="col px-4">
+        <h3>Vergleich</h3>
+    </div>
+</div>
+<div id="vergleich" class="row py-2">
+    <div class="col px-4">
+        <p><b>Richtige aus Prognose</b></p>
+        <p>Zahlen: {{ V_P_Zs }}</p>
+        <p>Zusatz-Zahl: {{ V_P_ZZ }}</p>
+    </div>
+    <div class="col px-4">
+        <p><b>Richtige aus Zufalls-Tipp</b></p>
+        <p>Zahlen: {{ V_Z_Zs }}</p>
+        <p>Zusatz-Zahl: {{ V_Z_ZZ }}</p>
+    </div>
+</div>
+<div id="start" class="row py-2">
+    <div class="col px-4">
+        <a href="{% url 'PYE24app:ZLMgame' UNIQUE_ID %}" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Nächste Ziehung</a>
+    </div>
+</div>
+<div id="back" class="row py-2">
+    <div class="col px-4">
+        <a href="{% url 'PYE24app:ZLMsummary' UNIQUE_ID %}" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Fertig</a>
+    </div>
+</div>
+{% endblock %}

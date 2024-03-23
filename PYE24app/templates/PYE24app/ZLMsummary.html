@@ -1,0 +1,38 @@
+{% extends "ZLMbase.html" %}
+
+{% block TITLE %}Zusammenfassung{% endblock %}
+
+{% block CONTENT %}
+<div id="summary" class="row py-2">
+    <div class="col px-4">
+        <h3>Zusammenfassung aller Ziehungen</h3>
+        <p>Anzahl Ziehungen: {{ Anz_Drws }}</p>
+    </div>
+</div>
+<div id="zahlen" class="row py-2">
+    <div class="col px-4">
+        <h3>Richtige aus Prognosen</h3>
+        <p>Zahlen: {{ R_P_Zs }}<br>
+           Durchschnitt: {{ D_P_Zs }}</p>
+        <p>Zusatz-Zahl: {{ R_P_ZZ }}<br>
+           Durchschnitt: {{ D_P_ZZ }}</p>
+    </div>
+    <div class="col px-4">
+        <h3>Richtige aus Zufalls-Tipps</h3>
+        <p>Zahlen: {{ R_Z_Zs }}<br>
+           Durchschnitt: {{ D_Z_Zs }}</p>
+        <p>Zusatz-Zahl: {{ R_Z_ZZ }}<br>
+           Durchschnitt: {{ D_Z_ZZ }}</p>
+    </div>
+</div>
+<div id="start" class="row py-2">
+    <div class="col px-4">
+        <a href="{% url 'PYE24app:ZLMdraws' %}" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Spiel neu starten</a>
+    </div>
+</div>
+<div id="back" class="row py-2">
+    <div class="col px-4">
+        <a href="https://www.erasand.ch/" class="btn btn-secondary btn-lg" tabindex="-1" role="button" aria-disabled="true">Zurück zu erasand.ch</a>
+    </div>
+</div>
+{% endblock %}
